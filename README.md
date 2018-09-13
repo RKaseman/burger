@@ -34,41 +34,6 @@ Be sure to utilize the [MYSQL Heroku Deployment Guide](../../Supplemental/MySQLH
 
 ## Instructions
 
-#### App Setup
-
-- [x] 1. Create a GitHub repo called `burger` and clone it to your computer.
-
-- [x] 2. Make a package.json file by running `npm init` from the command line.
-
-- [x] 3. Install the Express npm package: `npm install express`.
-
-- [x] 4. Create a server.js file.
-
-- [x] 5. Install the Handlebars npm package: `npm install express-handlebars`.
-
-- [x] 6. Install the body-parser npm package: `npm install body-parser`.
-
-- [x] 7. Install MySQL npm package: `npm install mysql`.
-
-8. Require the following npm packages inside of the server.js file:
-- [x]    * express
-- [x]    * body-parser
-
-#### DB Setup
-
-- [x] 1. Inside your `burger` directory, create a folder named `db`.
-
-- [x] 2. In the `db` folder, create a file named `schema.sql`. Write SQL queries this file that do the following:
-
-- [x]    * Create the `burgers_db`.
-- [x]    * Switch to or use the `burgers_db`.
-- [x]    * Create a `burgers` table with these fields:
-- [x]      * **id**: an auto incrementing int that serves as the primary key.
-- [x]      * **burger_name**: a string.
-- [x]      * **devoured**: a boolean.
-
-- [x] 3. Still in the `db` folder, create a `seeds.sql` file. In this file, write insert queries to populate the `burgers` table with at least three entries.
-
 #### Config Setup
 
 - [x] 1. Inside your `burger` directory, create a folder named `config`.
@@ -131,46 +96,6 @@ Be sure to utilize the [MYSQL Heroku Deployment Guide](../../Supplemental/MySQLH
 - [ ]      * Setup the `index.handlebars` to have the template that Handlebars can render onto.
 
 - [ ]      * Create a button in `index.handlebars` that will submit the user input into the database.
-
-#### Directory structure
-
-All the recommended files and directories from the steps above should look like the following structure:
-
-```
-.
-├── config
-│   ├── connection.js
-│   └── orm.js
-│ 
-├── controllers
-│   └── burgers_controller.js
-│
-├── db
-│   ├── schema.sql
-│   └── seeds.sql
-│
-├── models
-│   └── burger.js
-│ 
-├── node_modules
-│ 
-├── package.json
-│
-├── public
-│   └── assets
-│       ├── css
-│       │   └── burger_style.css
-│       └── img
-│           └── burger.png
-│   
-│
-├── server.js
-│
-└── views
-    ├── index.handlebars
-    └── layouts
-        └── main.handlebars
-```
 
 ### Reminder: Submission on BCS
 

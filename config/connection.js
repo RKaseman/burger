@@ -13,10 +13,14 @@ var connection = mysql.createConnection({
 
 
 // connection message or error
-connection.connect(function (error) {
-    if (error) throw error;
+connection.connect(function(error) {
+    if (error) {
+        console.log("Connection error" + error.stack);
+        return;
+    }
     console.log("\n-|    Connected    |-\n");
 });
 
 
 module.exports = connection;
+
