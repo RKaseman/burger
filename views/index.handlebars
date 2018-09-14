@@ -1,4 +1,25 @@
 
-<p>connected!</p>
-<button type="submit" id= "submit">Submit</button>
+<header>
+    <h1>Fish Food</h1>
+</header>
+
+<div id="wrapper">
+
+<div>
+    {{#each burger_data}}
+    {{#unless this.devoured}}
+    <div>
+        <p>{{this.id}}. {{this.burger_name}}</p>
+    </div>
+    <div>
+        <form method="POST" action="/burgers/update?_method=PUT">
+            <input type="hidden" name="burger_id" type="text" value={{this.id}}>
+            <button type="submit" id="submit">Eat It</button>
+        </form>
+    </div>
+        {{/unless}}
+        {{/each}}
+    </div>
+
+</div>
 
