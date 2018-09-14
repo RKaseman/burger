@@ -2,7 +2,6 @@
 var mysql = require("mysql");
 
 
-// database connection parameters
 var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
@@ -12,7 +11,6 @@ var connection = mysql.createConnection({
 });
 
 
-// connection message or error
 connection.connect(function(error) {
     if (error) {
         console.log("Connection error" + error.stack);
