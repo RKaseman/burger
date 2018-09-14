@@ -7,7 +7,7 @@ var orm = {
         var queryString = "SELECT * FROM " + selTable + ";";
         connection.query(queryString, function(error, result) {
             if (error) throw error;
-            console.log(result);
+            console.log("result" + result);
             callBack(result);
         });
 //     },
@@ -22,5 +22,5 @@ var orm = {
 };
 
 
-// module.exports = orm;
+module.exports = orm;
 

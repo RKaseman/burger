@@ -16,7 +16,7 @@ connection.connect(function(error) {
         console.log("Connection error" + error.stack);
         return;
     }
-    console.log("\n-|    Connection id " + connection.threadId + "    |-\n");
+    console.log("Connection id " + connection.threadId);
 });
 
 
