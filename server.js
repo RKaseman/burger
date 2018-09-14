@@ -18,15 +18,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-var routes = require("./controllers/burgers_controller");
+
+var routes = require("./controllers/burgers_controller.js");
 app.use("/", routes);
-
-// var orm = require("./config/orm.js");
-
-
-// // orm.select("burgers", "burger_name", "devoured", function(result) {
-//     // console.log(result);
-// // });
 
 
 app.listen(PORT, function() {

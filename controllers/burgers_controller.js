@@ -1,17 +1,17 @@
 
 var express = require("express");
 
-var burger = require("../models/burger.js");
-
-
 var router = express.Router();
 
 
+// var burger = require("../models/burger.js");
+
+
 router.get("/", function(request, response) {
-    burger.selectAll(function(burger_name) {
-        console.log(burger_name);
+//     burger.selectAll(function(burger_name) {
+//         console.log(burger_name);
         response.render("index");
-    });
+//     });
 });
 
 

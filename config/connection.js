@@ -1,4 +1,5 @@
 
+// mySQL connection data
 var mysql = require("mysql");
 
 
