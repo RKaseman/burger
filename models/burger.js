@@ -8,8 +8,11 @@ var burger = {
             callBack(response);
         });
     },
-    updateOne: function (id, callBack) {
+    updateOne: function(id, callBack) {
         orm.updateOne("burgers", id, callBack);
+    },
+    insertOne: function(name, callBack) {
+        orm.insertOne("burgers", name, callBack);
     }
 };
 
