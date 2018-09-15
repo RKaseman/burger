@@ -6,18 +6,24 @@
 <div id="wrapper">
 
 <div>
-    {{#each burger_data}}
+    {{#each burgerData}}
     {{#unless this.devoured}}
     <div>
-        <p>{{this.id}}. {{this.burger_name}}</p>
+        <p>{{this.id}}.{{this.burger_name}}</p>
     </div>
     <div>
-        <form method="POST" action="/burgers/update?_method=PUT">
-            <input type="hidden" name="burger_id" type="text" value={{this.id}}>
-            <button type="submit" id="submit">Eat It</button>
+        <form>
+            <button type="submit" id="eat" value={{this.id}}>Eat It</button>
         </form>
     </div>
         {{/unless}}
+        {{/each}}
+    </div>
+    <div>
+        {{#each burgerData}}
+        {{#if this.devoured}}
+            <input class="form-control" type="text" placeholder="{{this.id}}.{{this.burger_name}}" readonly>
+        {{/if}}
         {{/each}}
     </div>
 

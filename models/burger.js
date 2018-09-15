@@ -7,6 +7,9 @@ var burger = {
         orm.selectAll("burgers", function(response) {
             callBack(response);
         });
+    },
+    updateOne: function (id, callBack) {
+        orm.updateOne("burgers", id, callBack);
     }
 };
 

@@ -7,9 +7,16 @@ var burger = require("../models/burger.js");
 
 
 router.get("/", function(request, response) {
-    burger.selectAll(function(burger_data) {
-        console.log(burger_data);
-        response.render("index", {burger_data});
+    burger.selectAll(function(burgerData) {
+        console.log(burgerData);
+        response.render("index", {burgerData});
+    });
+});
+
+router.put("/burgers/update", function(request, response) {
+    burger.updateOne(request.body.burger_id, function(data) {
+        console.log(data);
+        result.redirect("/");
     });
 });
 
