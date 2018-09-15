@@ -13,6 +13,7 @@
     </div>
     <div>
         <form>
+            {{!-- send id back to db --}}
             <button type="submit" id="eat" value={{this.id}}>Eat It</button>
         </form>
     </div>
@@ -22,7 +23,7 @@
     <div>
         {{#each burgerData}}
         {{#if this.devoured}}
-            <input class="form-control" type="text" placeholder="{{this.id}}.{{this.burger_name}}" readonly>
+            <input type="text" placeholder="{{this.id}}.{{this.burger_name}}">
         {{/if}}
         {{/each}}
     </div>

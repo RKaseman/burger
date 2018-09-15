@@ -20,6 +20,6 @@ connection.connect(function(error) {
     console.log("Connection id " + connection.threadId);
 });
 
-
+// to orm.js
 module.exports = connection;
 

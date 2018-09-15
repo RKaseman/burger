@@ -14,5 +14,6 @@ var burger = {
 };
 
 
+// to burgers_controller.js
 module.exports = burger;
 
