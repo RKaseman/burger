@@ -1,19 +1,26 @@
 
 $(function() {
     $("#eat").on("click", function(event) {
-        event.preventDefault();
         var id = $(this).data("id");
+        console.log(this);
+        var isEaten = $(this).data("eaten");
 
-        // request
-        $.ajax("burgers" + id, {
+        var eatenState = {
+            devoured: isEaten
+        };
+
+
+        // PUT request
+        $.ajax("/burgers/" + id, {
             type: "PUT",
-            data: id
+            data: eatenState
         }).then(
-            function(callBack) {
-                console.log(callBack);
-                // location.reload();
+            function() {
+                console.log(isEaten);
+                location.reload();
             }
         )
     });
 });
 
+        // event.preventDefault();

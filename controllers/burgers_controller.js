@@ -7,18 +7,30 @@ var burger = require("../models/burger.js");
 
 
 router.get("/", function(request, response) {
-    burger.selectAll(function(burgerData) {
-        console.log(burgerData);
-        response.render("index", {burgerData});
+    burger.all(function(data) {
+        console.log(data);
+        response.render("index", {data});
     });
 });
 
-router.put("/burgers/update", function(request, response) {
-    burger.updateOne(request.body.burger_id, function(data) {
-        console.log(data);
-        result.redirect("/");
-    });
-});
+
+// router.post("burgers", function(request, response) {
+//     burger.create([
+//         "burger_name", "devoured"
+//     ], [
+//         request.body.burger_name, request.body.devoured
+//     ], function(result) {
+//         response.json({id: result.insertId});
+//     });
+// });
+
+
+// router.put("/", function(request, response) {
+//     burger.updateOne(request.body.id, function(data) {
+//         console.log(data);
+//         result.redirect("/");
+//     });
+// });
 
 
 // to server.js

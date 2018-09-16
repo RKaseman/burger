@@ -3,16 +3,16 @@ var orm = require("../config/orm.js");
 
 
 var burger = {
-    selectAll: function(callBack) {
-        orm.selectAll("burgers", function(response) {
+    all: function(callBack) {
+        orm.all("burgers", function(response) {
             callBack(response);
         });
-    },
-    updateOne: function(id, callBack) {
-        orm.updateOne("burgers", id, callBack);
-    },
-    insertOne: function(name, callBack) {
-        orm.insertOne("burgers", name, callBack);
+    // },
+    // updateOne: function(id, callBack) {
+    //     orm.updateOne("burgers", id, callBack);
+    // },
+    // insertOne: function(name, callBack) {
+    //     orm.insertOne("burgers", name, callBack);
     }
 };
 

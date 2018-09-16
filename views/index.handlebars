@@ -5,8 +5,8 @@
 
 <div id="wrapper">
 
-<div>
-    {{#each burgerData}}
+    <div>
+    {{#each data}}
     {{#unless this.devoured}}
     <div>
         <p>{{this.id}}.{{this.burger_name}}</p>
@@ -21,11 +21,18 @@
         {{/each}}
     </div>
     <div>
-        {{#each burgerData}}
+        {{#each data}}
         {{#if this.devoured}}
+        <form>
             <input type="text" placeholder="{{this.id}}.{{this.burger_name}}">
+        </form>
         {{/if}}
         {{/each}}
+    </div>
+    <div>
+        <form>
+            <button type="submit">Test</button>
+        </form>
     </div>
 
 </div>

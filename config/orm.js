@@ -3,27 +3,27 @@ var connection = require("./connection.js");
 
 
 var orm = {
-    selectAll: function(table, callBack) {
-        var queryString = "SELECT * FROM ??";
-        connection.query(queryString, [table], function(error, result) {
+    all: function(table, callBack) {
+        var queryString = "SELECT * FROM " + table;
+        connection.query(queryString, function(error, result) {
             if (error) throw error;
             callBack(result);
         });
     },
-    updateOne: function(table, colVal, callBack) {
-        var queryString = "UPDATE ?? SET devoured = true WHERE id = ?";
-        connection.query(queryString, [table, colVal], function(error, result) {
+    create: function(table, cols, vals, callBack) {
+        var queryString = "INSERT INTO " + table + " (" + cols + ") VALUES (??)";
+        connection.query(queryString, [vals], function(error, result) {
             if (error) throw error;
-            console.log(result);
             callBack(result);
         });
-    },
-    insertOne: function(table, inCol2, inCol3, callBack) {
-        var queryString = "INSERT INTO ?? (burger_name) VALUES ("
-        connection.query(queryString, [table, inCol2, inCol3], function(error, result) {
-            // tbd
-            callBack(result);
-        })
+    // },
+    // updateOne: function(table, idCol, callBack) {
+    //     var queryString = "UPDATE ?? SET devoured = true WHERE id = ?";
+    //     connection.query(queryString, [table, idCol], function(error, result) {
+    //         if (error) throw error;
+    //         console.log(result);
+    //         callBack(result);
+    //     });
     }
 };
 
