@@ -2,7 +2,8 @@
 $(function() {
     $("#eat").on("click", function(event) {
         var id = $(this).data("id");
-        console.log(this);
+        event.preventDefault();
+        console.log(this.value);
         var isEaten = $(this).data("eaten");
 
         var eatenState = {
@@ -11,7 +12,7 @@ $(function() {
 
 
         // PUT request
-        $.ajax("/burgers/" + id, {
+        $.ajax("burgers/" + id, {
             type: "PUT",
             data: eatenState
         }).then(
@@ -23,4 +24,3 @@ $(function() {
     });
 });
 
-        // event.preventDefault();
