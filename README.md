@@ -27,13 +27,24 @@ In light of the fact that my answer to the question posed is "yes", my goals on 
 ### changelog:
 
 1. write README.md
-1. had already started a few changes based on getting the original code up and running as a working model
-1. change diplayed text from cat references to burger references, noting possible deletes (2 files) not radio buttons
+1. had already made minor changes getting the original code up and running as a working model
+1. change diplayed text from cat references to burger references, noting possible deletes (2 files) not input type="radio"
 1. button .class change-sleep -> eatStatus (2 files) dropping dashes in favor of camelCase
 1. burgers_db -> burger_db (2 files)
-1. swapped order of AUTO_INCREMENT NOT NULL -> NOT NULL AUTO_INCREMENT (1 file) this fixed an undefined/blank error message I was getting on db creation
+1. schema.sql burger_db id INTEGER AUTO_INCREMENT NOT NULL -> id INTEGER NOT NULL AUTO_INCREMENT, this fixed an undefined/blank error message I was getting on db creation
 1. cats -> burgers (4 files) did plural before singular for easier edit selecting
 1. cat -> burger (5 files) not cat-block.handlebars references or filename
 1. Cat -> Burger (1 file)
-1. TABLE cats -> burgers (HeidiSQL) no change to original cat_db schema or seeds files
+1. cat_db TABLE cats -> burgers (HeidiSQL) not cat_db schema.sql or seeds.sql
+1. newSleep -> newEat (1 file)
+1. newsleep -> neweat (2 files)
+1. sleepy -> devoured (4 files)
+1. sleep -> devour (3 files)
+1. input type="radio" -> [status 1], [status 2] (1 file)
+1. cat_db TABLE burgers column sleepy -> devoured (HeidiSQL) not cat_db schema.sql or seeds.sql
+1. schema.sql seeds.sql burger_db TABLE burgers column burger_name -> name (2 files) changed my original db instead of 14 results in 6 files
+1. seeds.sql burger_db TABLE burgers VALUES removed explicit false
+1. disabled cat_db, enabled burger_db
+1. label for=, input type="text" id= "ca" -> "burg" (1 file) /result/ Uncaught TypeError: Cannot read property 'trim' of undefined
+1. ^ also "#ca" -> "#burg" (1 file) /result/ error resolved
 

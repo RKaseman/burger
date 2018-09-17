@@ -2,9 +2,9 @@
 USE burger_db;
 
 INSERT INTO burgers
-    (burger_name, devoured)
+    (name)
 VALUES
-    ("testburger1", false),
-    ("testburger2", false),
-    ("testburger3", false);
+    ("testburger1"),
+    ("testburger2"),
+    ("testburger3");
 
