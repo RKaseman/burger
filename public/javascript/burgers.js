@@ -26,6 +26,9 @@ $(function () {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
+        // creates new burger from index.handlebars <form>
+        // <input type="text" id="burg" name="name">
+        // and <input type="radio" name="devoured" value="1" checked>
         var newBurger = {
             name: $("#burg").val().trim(),
             devoured: $("[name=devoured]:checked").val().trim()

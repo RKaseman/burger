@@ -51,4 +51,10 @@ In light of the fact that my answer to the question posed is "yes", my goals on 
 1. "#ca" -> "#burg" (1 file) _/result/_ error resolved
 1. filename cat-block.handlebars -> burger-block.handlebars
 1. cat-block -> burger-block (1 file)
+1. index.handlebars `<input type="radio" -> "hidden">` _/result/_ Uncaught TypeError: Cannot read property 'trim' of undefined
+1. revert, add `<input class="hidden" type="radio">` _/result/_ error resolved
+1. create stylesheet, add `input.hidden { display: none; }` radio buttons hidden
+1. main.handlebars `<link rel="stylesheet" type="text/css" href="../../public/css/burgerStyle.css">` _/result/_ Refused to apply style from 'http://localhost:8080/public/css/burgerStyle.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
+1. revert, correct file path `<link rel="stylesheet" type="text/css" href="/css/burgerStyle.css">` _/result/_ error resolved, style applied
+1. css styling, mostly testing ideas for buttons that involve cat pictures
 
