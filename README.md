@@ -8,6 +8,8 @@ __-- Sarah Cullen, Coding Instructor__
 > You don’t have to know everything. You just have to know where to find it.
 __-- Albert Einstein__
 
+- - -
+
 Is it _as important_ to understand and work with existing code as it is to be able to write new code?
 
 I asked myself this question when my front end development head struggled with this back end project. I want to understand everything, but realize it's not possible. What to do? Learn whatever I can, of course.
@@ -45,6 +47,8 @@ In light of the fact that my answer to the question posed is "yes", my goals on 
 1. schema.sql seeds.sql burger_db TABLE burgers column burger_name -> name (2 files) changed my original db instead of 14 results in 6 files
 1. seeds.sql burger_db TABLE burgers VALUES removed explicit false
 1. disabled cat_db, enabled burger_db
-1. label for=, input type="text" id= "ca" -> "burg" (1 file) /result/ Uncaught TypeError: Cannot read property 'trim' of undefined
-1. ^ also "#ca" -> "#burg" (1 file) /result/ error resolved
+1. label for="ca", input type="text" id="ca" -> "burg" (1 file) _/result/_ Uncaught TypeError: Cannot read property 'trim' of undefined
+1. "#ca" -> "#burg" (1 file) _/result/_ error resolved
+1. filename cat-block.handlebars -> burger-block.handlebars
+1. cat-block -> burger-block (1 file)
 
