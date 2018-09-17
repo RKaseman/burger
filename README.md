@@ -42,10 +42,10 @@ In light of the fact that my answer to the question posed is "yes", my goals on 
 1. newsleep -> neweat (2 files)
 1. sleepy -> devoured (4 files)
 1. sleep -> devour (3 files)
-1. input type="radio" -> [status 1], [status 2] (1 file)
+1. input type="radio" -> [status 1], [status 2] (1 file) for differentiation to deal with later
 1. cat_db TABLE burgers column sleepy -> devoured (HeidiSQL) not cat_db schema.sql or seeds.sql
-1. schema.sql seeds.sql burger_db TABLE burgers column burger_name -> name (2 files) changed my original db instead of 14 results in 6 files
-1. seeds.sql burger_db TABLE burgers VALUES removed explicit false
+1. schema.sql seeds.sql burger_db TABLE burgers column burger_name -> name, changed my original db instead of 14 results in 6 files
+1. seeds.sql burger_db TABLE burgers VALUES, removed explicit false
 1. disabled cat_db, enabled burger_db
 1. label for="ca", input type="text" id="ca" -> "burg" (1 file) _/result/_ Uncaught TypeError: Cannot read property 'trim' of undefined
 1. "#ca" -> "#burg" (1 file) _/result/_ error resolved
@@ -57,4 +57,5 @@ In light of the fact that my answer to the question posed is "yes", my goals on 
 1. main.handlebars `<link rel="stylesheet" type="text/css" href="../../public/css/burgerStyle.css">` _/result/_ Refused to apply style from 'http://localhost:8080/public/css/burgerStyle.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
 1. revert, correct file path `<link rel="stylesheet" type="text/css" href="/css/burgerStyle.css">` _/result/_ error resolved, style applied
 1. css styling, mostly testing ideas for buttons that involve cat pictures
+1. seeds.sql burger_db TABLE burgers VALUES, reduced to one test entry
 
