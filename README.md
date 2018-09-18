@@ -5,6 +5,7 @@
 
 > But it's not the end of the world if you don't understand absolutely everything.
 __-- Sarah Cullen, Coding Instructor__
+-
 > You don’t have to know everything. You just have to know where to find it.
 __-- Albert Einstein__
 
@@ -59,4 +60,5 @@ In light of the fact that my answer to the question posed is "yes", my goals on 
 1. css styling, mostly testing ideas for buttons that involve cat pictures
 1. seeds.sql burger_db TABLE burgers VALUES, reduced to one test entry
 1. batch of comments
+1. css styling
 
