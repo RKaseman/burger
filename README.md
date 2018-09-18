@@ -5,10 +5,10 @@
 
 > But it's not the end of the world if you don't understand absolutely everything.
 __-- Sarah Cullen, Coding Instructor__
--
+>
 > You don’t have to know everything. You just have to know where to find it.
 __-- Albert Einstein__
-
+>
 - - -
 
 Is it _as important_ to understand and work with existing code as it is to be able to write new code?
