@@ -1,6 +1,7 @@
 
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
+// wait for DOM load
 $(function () {
+    // when .eatStatus button is clicked
     $(".eatStatus").on("click", function (event) {
         var id = $(this).data("id");
         var newEat = $(this).data("neweat");
@@ -9,39 +10,40 @@ $(function () {
             devoured: newEat
         };
 
-        // Send the PUT request.
+// request toggles ?
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newEatState
         }).then(
             function () {
                 console.log("changed devour to", newEat);
-                // Reload the page to get the updated list
+                // reload updated page
                 location.reload();
             }
         );
     });
 
+    // creates new burger from index.handlebars <form>
     $(".create-form").on("submit", function (event) {
-        // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
-        // creates new burger from index.handlebars <form>
         // <input type="text" id="burg" name="name">
-        // and <input type="radio" name="devoured" value="1" checked>
+        // and <input class="hidden" type="radio" name="devoured" value="1" checked>
+        // or <input class="hidden" type="radio" name="devoured" value="0">
         var newBurger = {
             name: $("#burg").val().trim(),
             devoured: $("[name=devoured]:checked").val().trim()
         };
 
-        // Send the POST request.
+        // send the variable of <input type="text" id="burg" name="name">
+        // and <input type="radio" name="devoured" value="*" *>
         $.ajax("/api/burgers", {
             type: "POST",
             data: newBurger
         }).then(
             function () {
                 console.log("created new burger");
-                // Reload the page to get the updated list
+                // reload updated page
                 location.reload();
             }
         );
@@ -50,13 +52,13 @@ $(function () {
     $(".delete-burger").on("click", function (event) {
         var id = $(this).data("id");
 
-        // Send the DELETE request.
+        // [del]
         $.ajax("/api/burgers/" + id, {
             type: "DELETE"
         }).then(
             function () {
                 console.log("deleted burger", id);
-                // Reload the page to get the updated list
+                // reload updated page
                 location.reload();
             }
         );

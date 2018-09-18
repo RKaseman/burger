@@ -58,4 +58,5 @@ In light of the fact that my answer to the question posed is "yes", my goals on 
 1. revert, correct file path `<link rel="stylesheet" type="text/css" href="/css/burgerStyle.css">` _/result/_ error resolved, style applied
 1. css styling, mostly testing ideas for buttons that involve cat pictures
 1. seeds.sql burger_db TABLE burgers VALUES, reduced to one test entry
+1. batch of comments
 

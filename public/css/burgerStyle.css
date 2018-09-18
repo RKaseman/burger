@@ -4,7 +4,54 @@ input.hidden {
 }
 
 body {
+    max-width: 75%;
     background-color: #bbbbff;
+
+    margin: 0px auto;
+}
+
+header {
+    text-align: center;
+}
+
+.floats {
+    overflow: auto;
+
+    /* border: 8px solid #ff0000; */
+
+    /* margin: 32px auto; */
+    padding: 32px;
+}
+
+#order {
+    display: inline-block;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+
+    /* position: relative; */
+    /* left: 16%; */
+    width: 49%;
+    border: 2px solid #000000;
+    /* margin: auto; */
+}
+
+#cat {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* position: relative; */
+    /* right: 48%; */
+    width: 49%;
+    border: 2px solid #000000;
+    /* margin: auto; */
+}
+
+.noFloats {
+    /* border: 2px dashed #000000; */
+    text-align: center;
+
+    padding: 32px;
 }
 
 button {

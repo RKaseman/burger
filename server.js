@@ -3,13 +3,13 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
-
+// port to use
 var PORT = process.env.PORT || 8080;
-
+// create express instance
 var app = express();
 
 
-// get public folder's files (css, javascript)
+// access public folder (css, javascript)
 app.use(express.static("public"));
 
 

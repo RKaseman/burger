@@ -1,56 +1,53 @@
 
 var connection = require("../config/connection.js");
 
-// Helper function for SQL syntax.
-// Let's say we want to pass 3 values into the mySQL query.
-// In order to write the query, we need 3 question marks.
-// The above helper function loops through and creates an array of question marks - ["?", "?", "?"] - and turns it into a string.
-// ["?", "?", "?"].toString() => "?,?,?";
-function printQuestionMarks(num) {
-    var arr = [];
+function printQuestionMarks(number) {
+    // create an empty array
+    var array = [];
 
-    for (var i = 0; i < num; i++) {
-        arr.push("?");
+    // called in orm.create then loop through and print an array of question marks
+    // needed for insertion into the sql queryString
+    for (var i = 0; i < number; i++) {
+        array.push("?");
     }
-
-    return arr.toString();
+    return array.toString();
 }
 
 // Helper function to convert object key/value pairs to SQL syntax
-function objToSql(ob) {
-    var arr = [];
+function objToSql(object) {
+    // create an empty array
+    var array = [];
 
-    // loop through the keys and push the key/value as a string int arr
-    for (var key in ob) {
-        var value = ob[key];
+    // loop through the keys and push the key/value as a string int array
+    for (var key in object) {
+        var value = object[key];
         // check to skip hidden properties
-        if (Object.hasOwnProperty.call(ob, key)) {
-            // if string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
+        if (Object.hasOwnProperty.call(object, key)) {
+            // adds quotes if string input (name) has spaces
             if (typeof value === "string" && value.indexOf(" ") >= 0) {
                 value = "'" + value + "'";
             }
-            // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-            // e.g. {devoured: true} => ["devoured=true"]
-            arr.push(key + "=" + value);
+            // keys are name and devoured, values are the name entered in
+            // <input type="text" id="burg" name="name"> and boolean
+            array.push(key + "=" + value);
         }
     }
-
     // translate array of strings to a single comma-separated string
-    return arr.toString();
+    return array.toString();
 }
 
 // Object for all our SQL statement functions.
 var orm = {
-    all: function (tableInput, cb) {
+    all: function (tableInput, callBack) {
         var queryString = "SELECT * FROM " + tableInput + ";";
-        connection.query(queryString, function (err, result) {
-            if (err) {
-                throw err;
+        connection.query(queryString, function (error, result) {
+            if (error) {
+                throw error;
             }
-            cb(result);
+            callBack(result);
         });
     },
-    create: function (table, cols, vals, cb) {
+    create: function (table, cols, vals, callBack) {
         var queryString = "INSERT INTO " + table;
 
         queryString += " (";
@@ -62,16 +59,16 @@ var orm = {
 
         console.log(queryString);
 
-        connection.query(queryString, vals, function (err, result) {
-            if (err) {
-                throw err;
+        connection.query(queryString, vals, function (error, result) {
+            if (error) {
+                throw error;
             }
 
-            cb(result);
+            callBack(result);
         });
     },
     // An example of objColVals would be {name: panther, devoured: true}
-    update: function (table, objColVals, condition, cb) {
+    update: function (table, objColVals, condition, callBack) {
         var queryString = "UPDATE " + table;
 
         queryString += " SET ";
@@ -80,25 +77,25 @@ var orm = {
         queryString += condition;
 
         console.log(queryString);
-        connection.query(queryString, function (err, result) {
-            if (err) {
-                throw err;
+        connection.query(queryString, function (error, result) {
+            if (error) {
+                throw error;
             }
 
-            cb(result);
+            callBack(result);
         });
     },
-    delete: function (table, condition, cb) {
+    delete: function (table, condition, callBack) {
         var queryString = "DELETE FROM " + table;
         queryString += " WHERE ";
         queryString += condition;
 
-        connection.query(queryString, function (err, result) {
-            if (err) {
-                throw err;
+        connection.query(queryString, function (error, result) {
+            if (error) {
+                throw error;
             }
 
-            cb(result);
+            callBack(result);
         });
     }
 };
