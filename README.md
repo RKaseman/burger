@@ -61,4 +61,5 @@ In light of the fact that my answer to the question posed is "yes", my goals on 
 1. seeds.sql burger_db TABLE burgers VALUES, reduced to one test entry
 1. batch of comments
 1. css styling
+1. added images and advanced styling
 
