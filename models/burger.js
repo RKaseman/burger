@@ -30,10 +30,6 @@ var burger = {
 module.exports = burger;
 
 
-
-// var orm = require("../config/orm.js");
-
-
 // var burger = {
 //     all: function(callBack) {
 //         orm.all("burgers", function(response) {
@@ -47,8 +43,4 @@ module.exports = burger;
 //     //     orm.insertOne("burgers", name, callBack);
 //     }
 // };
-
-
-// // to burgers_controller.js
-// module.exports = burger;
 

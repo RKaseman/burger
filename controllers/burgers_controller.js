@@ -66,12 +66,6 @@ router.delete("/api/burgers/:id", function (request, response) {
 // to server.js
 module.exports = router;
 
-// var express = require("express");
-
-// var router = express.Router();
-
-// var burger = require("../models/burger.js");
-
 
 // router.get("/", function(request, response) {
 //     burger.all(function(data) {
@@ -98,8 +92,4 @@ module.exports = router;
 // //         result.redirect("/");
 // //     });
 // // });
-
-
-// // to server.js
-// module.exports = router;
 

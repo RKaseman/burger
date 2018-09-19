@@ -4,5 +4,5 @@ USE burger_db;
 INSERT INTO burgers
     (name)
 VALUES
-    ("testburger1");
+    ("test burger 1");
 

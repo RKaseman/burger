@@ -1,5 +1,5 @@
 
-var connection = require("../config/connection.js");
+var connection = require("./connection.js");
 
 function printQuestionMarks(number) {
     // create an empty array
@@ -103,8 +103,6 @@ var orm = {
 // to burger.js
 module.exports = orm;
 
-// var connection = require("./connection.js");
-
 
 // var orm = {
 //     all: function(table, callBack) {
@@ -130,8 +128,4 @@ module.exports = orm;
 //     //     });
 //     }
 // };
-
-
-// // to burger.js
-// module.exports = orm;
 

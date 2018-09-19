@@ -14,41 +14,30 @@ header {
     text-align: center;
 }
 
-.floats {
-    overflow: auto;
+.flex-container {
+    display: flex;
+    justify-content: center;
 
-    /* border: 8px solid #ff0000; */
-
-    /* margin: 32px auto; */
-    padding: 32px;
+    border: 2px solid #ff0000;
 }
 
 #order {
-    display: inline-block;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
+    margin-left: 2px;
 
-    /* position: relative; */
-    /* left: 16%; */
-    width: 49%;
+    min-height: 384px;
+    width: 48%;
     border: 2px solid #000000;
-    /* margin: auto; */
 }
 
 #cat {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 2px;
 
-    /* position: relative; */
-    /* right: 48%; */
-    width: 49%;
+    min-height: 384px;
+    width: 48%;
     border: 2px solid #000000;
-    /* margin: auto; */
 }
 
 .noFloats {
-    /* border: 2px dashed #000000; */
     text-align: center;
 
     padding: 32px;
