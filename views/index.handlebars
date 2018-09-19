@@ -3,7 +3,6 @@
 <h1>Cat Burgers</h1>
 </header>
 
-<hr>
 <div class="flex-container">
     <div id="order">
         <h2>Order up:</h2>
@@ -25,28 +24,29 @@
             {{/each}}
         </ul>
     </div>
-    <div id="catPic">
-    <img src="https://placekitten.com/g/100/150" alt="kitties">
-    </div>
 </div>
 
-<hr>
-<div class="noFloats">
-<h2>Create a Burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="burg">Give it a name:</label><br>
-        <input required type="text" id="burg" name="name">
+<div class="new">
+    <div id="catPic">
+        <img src="https://placekitten.com/g/400/400" alt="kitties">
     </div>
+    <div class="overlay">
+        <h2>Create a Burger</h2>
+        <form class="create-form">
 
-    <div class="form-group">
-        <label for="devoured"></label><br>
-        <input class="hidden" type="radio" name="devoured" value="1" checked>
-        <input class="hidden" type="radio" name="devoured" value="0">
+            <div class="form-group">
+                <label for="burg">Give it a name:</label><br>
+                <input required type="text" id="burg" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="devoured"></label><br>
+                <input class="hidden" type="radio" name="devoured" value="1" checked>
+                <input class="hidden" type="radio" name="devoured" value="0">
+            </div>
+
+            <button type="submit">Create</button>
+        </form>
     </div>
-
-    <button type="submit">Create</button>
-</form>
 </div>
 

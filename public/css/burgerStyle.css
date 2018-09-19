@@ -20,38 +20,52 @@ header {
 }
 
 #order {
-    min-height: 384px;
+    min-height: 320px;
     width: 48%;
-    border: 2px solid #000000;
+    border-top: 2px solid #666666;
+    border-right: 2px solid #000000;
+
+    padding: 16px;
 }
 
 #cat {
-    min-height: 384px;
+    min-height: 320px;
     width: 48%;
-    border: 2px solid #000000;
+    border-top: 2px solid #666666;
+    border-left: 2px solid #000000;
+
+    padding: 16px;
+}
+
+.new {
+    position: relative;
+    text-align: center;
+
+    padding: 16px;
 }
 
 #catPic {
-    min-width: 24%;
-    border: 2px solid #000000;
-    padding: 32px;
-}
-
-img {
-    margin: 0px auto;
-}
-
-.noFloats {
-    text-align: center;
-
-    padding: 32px;
+    /* border: 2px solid #000000; */
+    padding: 16px;
 }
 
 button {
     background-color: #6666ff;
 }
 
-button.hidden {
-    display: none;
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: #ffffff;
+    opacity: 0.65;
+
+    width: 24%;
+    height: 144px;
+
+    border-radius: 16px;
+
+    padding: 16px;
 }
 
