@@ -17,24 +17,28 @@ header {
 .flex-container {
     display: flex;
     justify-content: center;
-
-    border: 2px solid #ff0000;
 }
 
 #order {
-    margin-left: 2px;
-
     min-height: 384px;
     width: 48%;
     border: 2px solid #000000;
 }
 
 #cat {
-    margin-right: 2px;
-
     min-height: 384px;
     width: 48%;
     border: 2px solid #000000;
+}
+
+#catPic {
+    min-width: 24%;
+    border: 2px solid #000000;
+    padding: 32px;
+}
+
+img {
+    margin: 0px auto;
 }
 
 .noFloats {
@@ -44,7 +48,10 @@ header {
 }
 
 button {
-    /* background-image: url("http://theoldreader.com/kittens/600/400/js"); */
     background-color: #6666ff;
+}
+
+button.hidden {
+    display: none;
 }
 
