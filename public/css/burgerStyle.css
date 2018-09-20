@@ -7,7 +7,7 @@ body {
     font-family: 'Sigmar One', cursive;
 
     max-width: 75%;
-    background-color: #bbbbff;
+    background-image: linear-gradient(#8888ff, #bbbbff);
 
     margin: 0px auto;
 }
@@ -70,7 +70,9 @@ img.flip {
 }
 
 #catPic {
-    padding: 16px;
+    height: 100%;
+    width: 100%;
+    /* padding: 16px; */
 }
 
 button {
@@ -90,5 +92,9 @@ button {
     border-radius: 16px;
 
     padding: 4px;
+}
+
+input#burg {
+    width: 96%;
 }
 
