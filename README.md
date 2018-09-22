@@ -1,8 +1,6 @@
 
 # [Node Express Handlebars - Cat Burgers](https://burgers-by-rmk.herokuapp.com/)
 
-- - -
-
 > But it's not the end of the world if you don't understand absolutely everything.
 __-- Sarah Cullen, Coding Instructor__
 >
