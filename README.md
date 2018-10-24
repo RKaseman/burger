@@ -20,7 +20,6 @@ In light of the fact that my answer to the question posed is "yes", my goals on 
     * Refactor and repurpose.
   * comment the heck out of it to show I get it, even if I couldn't write it myself.
   * use even more in depth feedback from editor Visual Studio Code and Chrome Developer Tools to dive into them in greatest possible detail.
-  * fight the feeling that this is cheating and _learn as much as I can in the process_.
   * finish with greater understanding and a working project.
 
 ## Here is: Cat Burgers (Don't take it wrong. I love cats.)
